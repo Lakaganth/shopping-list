@@ -1,11 +1,11 @@
 $(function() {
   //  deleting items
 
-  $(".shopping-item-delete").on("click", handleDeleteTask);
+  $(".shopping-list").on("click", `.shopping-item-delete`, handleDeleteTask);
 
   // Strike through
 
-  $(".shopping-item-toggle").on("click", handleCheckItems);
+  $(".shopping-list").on("click", `.shopping-item-toggle`, handleCheckItems);
 
   // Adding new List item
   $("#js-shopping-list-form").on("submit", handleAddTask);
@@ -42,7 +42,6 @@ function handleDeleteTask() {
 
 function handleCheckItems() {
   const strike = $(this).closest("li");
-  console.log(strike);
+
   strike.toggleClass("shopping-item__checked");
-  // console.log(strike);
 }
