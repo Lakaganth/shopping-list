@@ -30,6 +30,7 @@ function handleAddTask(e) {
   </li>`;
 
   $(".shopping-list").append(listItem);
+  $("input#shopping-list-entry").val("");
 }
 
 function handleDeleteTask() {
